@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// Route::get('/', 'HomeController@index');
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('users', 'UserController');
+// Route::get('/users', 'UserController@upload')->name('user.upload');
